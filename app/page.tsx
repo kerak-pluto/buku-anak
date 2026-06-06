@@ -227,7 +227,7 @@ const App = () => {
         <div className="inline-block bg-[#6D4C41] text-white px-6 py-2 rounded-full font-bold text-sm md:text-lg mb-6 shadow-md uppercase tracking-wide border-2 border-white">
           Perpustakaan Digital Anak Islam Terlengkap
         </div>
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight drop-shadow-sm uppercase">
+        <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight drop-shadow-sm uppercase">
           <span className="text-[#E65100]">Belajar Seru </span><br className="hidden md:block"/>
           <span className="text-[#2E7D32]">Setiap Hari!</span>
         </h1>
@@ -253,7 +253,7 @@ const App = () => {
             <Moon size={40} fill="currentColor" strokeWidth={0} />
           </div>
           
-          <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-[#FFCC80] text-[#E65100] font-black px-8 py-2 rounded-full shadow-md text-lg uppercase tracking-widest border-4 border-white whitespace-nowrap">
+          <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-[#FFCC80] text-[#E65100] font-black px-4 md:px-8 py-2 rounded-full shadow-md text-xs sm:text-sm md:text-lg uppercase tracking-wider md:tracking-widest border-4 border-white whitespace-nowrap">
             Mengapa Bunda Harus Punya Ini?
           </div>
           
@@ -343,13 +343,13 @@ const App = () => {
             {/* Navigation Buttons */}
             <button
               onClick={() => setCurrentSlide((prev) => (prev - 1 + Math.ceil(booksData.length / booksPerSlide)) % Math.ceil(booksData.length / booksPerSlide))}
-              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-6 md:-translate-x-12 bg-[#E65100] text-white p-3 md:p-4 rounded-full shadow-lg hover:bg-[#FF7043] transition transform hover:scale-110"
+              className="absolute left-2 md:-left-6 lg:-left-12 top-1/2 -translate-y-1/2 bg-[#E65100] text-white p-3 md:p-4 rounded-full shadow-lg hover:bg-[#FF7043] transition transform hover:scale-110 z-20"
             >
               ❮
             </button>
             <button
               onClick={() => setCurrentSlide((prev) => (prev + 1) % Math.ceil(booksData.length / booksPerSlide))}
-              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-6 md:translate-x-12 bg-[#E65100] text-white p-3 md:p-4 rounded-full shadow-lg hover:bg-[#FF7043] transition transform hover:scale-110"
+              className="absolute right-2 md:-right-6 lg:-right-12 top-1/2 -translate-y-1/2 bg-[#E65100] text-white p-3 md:p-4 rounded-full shadow-lg hover:bg-[#FF7043] transition transform hover:scale-110 z-20"
             >
               ❯
             </button>
@@ -376,9 +376,9 @@ const App = () => {
         </section>
 
         {/* MID CTA BANNER */}
-        <div className="bg-white border-2 border-[#81C784] border-dashed rounded-2xl p-5 md:p-6 flex items-center justify-center space-x-4 max-w-4xl mx-auto shadow-sm">
+        <div className="bg-white border-2 border-[#81C784] border-dashed rounded-2xl p-5 md:p-6 flex flex-col md:flex-row items-center justify-center gap-4 max-w-4xl mx-auto shadow-sm text-center md:text-left">
           <Heart className="text-red-500 w-12 h-12 shrink-0 animate-pulse" fill="#EF4444" />
-          <p className="text-lg md:text-xl font-bold text-[#1B5E20] text-center md:text-left leading-snug">
+          <p className="text-lg md:text-xl font-bold text-[#1B5E20] leading-snug">
             Dukung tumbuh kembang anak Anda dengan bacaan islami yang bermanfaat HARI INI JUGA!
           </p>
         </div>
@@ -419,7 +419,7 @@ const App = () => {
             </div>
             
             <div className="relative z-10 flex flex-col items-center pt-4">
-              <h2 className="text-4xl md:text-6xl font-black mb-8 text-center drop-shadow-lg tracking-wider text-[#FFEB3B]">
+              <h2 className="text-2xl sm:text-4xl md:text-6xl font-black mb-8 text-center drop-shadow-lg tracking-wider text-[#FFEB3B]">
                 DAPATKAN PAKET BUKU
               </h2>
               
@@ -427,23 +427,23 @@ const App = () => {
                 <div className="flex flex-col items-center justify-center relative">
                   <span className="text-white text-xl font-bold uppercase tracking-widest mb-1">Harga Normal</span>
                   <div className="relative">
-                    <span className="text-4xl md:text-5xl font-black text-white opacity-80">Rp 1.999.000</span>
+                    <span className="text-3xl sm:text-4xl md:text-5xl font-black text-white opacity-80">Rp 1.999.000</span>
                     <div className="absolute top-1/2 left-0 w-full h-2 bg-red-600 transform -rotate-3 rounded-full"></div>
                   </div>
                 </div>
                 
-                <div className="bg-[#FF9800] text-white px-8 md:px-12 py-6 rounded-4xl font-black text-center shadow-[0_10px_0_#E65100] border-4 border-white transform transition hover:-translate-y-1 hover:shadow-[0_15px_0_#E65100] cursor-default mt-4 md:mt-0">
-                  <span className="text-3xl md:text-5xl drop-shadow-md leading-tight text-white">CUKUP BAYAR<br/><span className="text-[#FFFDE7]">SEIKHLASNYA!</span></span>
+                <div className="bg-[#FF9800] text-white px-6 md:px-12 py-4 md:py-6 rounded-3xl md:rounded-4xl font-black text-center shadow-[0_8px_0_#E65100] md:shadow-[0_10px_0_#E65100] border-4 border-white transform transition hover:-translate-y-1 hover:shadow-[0_12px_0_#E65100] md:hover:shadow-[0_15px_0_#E65100] cursor-default mt-4 md:mt-0">
+                  <span className="text-2xl sm:text-3xl md:text-5xl drop-shadow-md leading-tight text-white">CUKUP BAYAR<br/><span className="text-[#FFFDE7]">SEIKHLASNYA!</span></span>
                 </div>
               </div>
 
               {/* FINAL CTA BUTTON */}
-              <button onClick={() => window.location.href = 'http://lynk.id/wira_arfi/4ox99vo1n8vm/checkout'} className="group relative bg-linear-to-b from-white to-gray-100 hover:from-green-50 hover:to-white text-[#2E7D32] rounded-full px-8 md:px-16 py-6 shadow-2xl transform transition hover:scale-105 active:scale-95 w-full md:w-auto flex flex-col items-center justify-center gap-2">
+              <button onClick={() => window.location.href = 'http://lynk.id/wira_arfi/4ox99vo1n8vm/checkout'} className="group relative bg-linear-to-b from-white to-gray-100 hover:from-green-50 hover:to-white text-[#2E7D32] rounded-full px-6 md:px-16 py-4 md:py-6 shadow-2xl transform transition hover:scale-105 active:scale-95 w-full md:w-auto flex flex-col items-center justify-center gap-2">
                 <div className="flex items-center gap-3">
-                  <span className="text-3xl md:text-4xl font-black drop-shadow-sm">DAPATKAN SEKARANG!</span>
+                  <span className="text-xl sm:text-2xl md:text-4xl font-black drop-shadow-sm">DAPATKAN SEKARANG!</span>
                   <MousePointerClick className="w-8 h-8 hidden md:block text-[#E65100] animate-bounce" />
                 </div>
-                <span className="text-sm md:text-base font-bold opacity-80 uppercase tracking-widest">
+                <span className="text-xs sm:text-sm md:text-base font-bold opacity-80 uppercase tracking-widest">
                   Akses Selamanya via Google Drive
                 </span>
               </button>
@@ -458,7 +458,7 @@ const App = () => {
             <p className="text-gray-600 font-medium mt-2">Ikuti 5 langkah simpel di halaman checkout nanti</p>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-6 md:gap-4 max-w-5xl mx-auto relative">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6 md:gap-4 max-w-5xl mx-auto relative">
             {/* Garis Penghubung (Hanya Desktop) */}
             <div className="hidden md:block absolute top-10 left-10 right-10 h-1 bg-orange-200 -z-10"></div>
             
@@ -681,15 +681,15 @@ const TestimonialCard = ({ name, text, rating }: { name: string; text: string; r
 );
 
 const InfographicStep = ({ num, icon, title, desc }: { num: string; icon: React.ReactNode; title: string; desc: string }) => (
-  <div className="flex flex-col items-center text-center relative">
-    <div className="bg-linear-to-br from-[#E65100] to-[#FF7043] text-white rounded-full w-16 h-16 flex items-center justify-center font-black text-2xl shadow-lg mb-4 relative z-10 border-4 border-white">
+  <div className="flex flex-col items-center text-center relative w-full">
+    <div className="bg-linear-to-br from-[#E65100] to-[#FF7043] text-white rounded-full w-12 h-12 md:w-16 md:h-16 flex items-center justify-center font-black text-xl md:text-2xl shadow-lg mb-3 md:mb-4 relative z-10 border-4 border-white shrink-0">
       {num}
     </div>
-    <div className="bg-white p-4 rounded-2xl shadow-md border border-orange-100 h-full">
-      <div className="text-[#E65100] mb-3 flex justify-center">
+    <div className="bg-white p-5 rounded-2xl shadow-md border border-orange-100 h-full w-full flex flex-col items-center">
+      <div className="text-[#E65100] mb-2 md:mb-3">
         {icon}
       </div>
-      <h3 className="font-bold text-base md:text-lg text-gray-900 mb-2">{title}</h3>
+      <h3 className="font-bold text-base md:text-lg text-gray-900 mb-1 md:mb-2">{title}</h3>
       <p className="text-xs md:text-sm text-gray-600 leading-relaxed">{desc}</p>
     </div>
   </div>
