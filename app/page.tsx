@@ -1,16 +1,16 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { 
-  BookOpen, 
-  Smile, 
-  Star, 
-  Smartphone, 
-  Heart, 
-  Gift, 
-  Book, 
-  CheckCircle, 
-  Image as ImageIcon, 
+import {
+  BookOpen,
+  Smile,
+  Star,
+  Smartphone,
+  Heart,
+  Gift,
+  Book,
+  CheckCircle,
+  Image as ImageIcon,
   DownloadCloud,
   MousePointerClick,
   Moon,
@@ -116,7 +116,7 @@ const App = () => {
         setNotifIndex((prev) => (prev + 1) % fakeOrders.length);
       }, 5000); // Tampil selama 5 detik
     }, 15000); // Muncul setiap 15 detik
-    
+
     return () => clearInterval(notifInterval);
   }, []);
 
@@ -132,9 +132,10 @@ const App = () => {
 
   return (
     <div className="min-h-screen bg-[#FDF9F1] font-sans text-gray-800 overflow-x-hidden relative pb-24">
-      
+
       {/* --- INJECT CUSTOM CSS UNTUK MARQUEE & ANIMASI --- */}
-      <style dangerouslySetInnerHTML={{__html: `
+      <style dangerouslySetInnerHTML={{
+        __html: `
         @keyframes scroll {
           0% { transform: translateX(100%); }
           100% { transform: translateX(-100%); }
@@ -190,19 +191,19 @@ const App = () => {
       <div className="absolute top-20 left-10 text-yellow-300 opacity-40 hidden md:block animate-pulse">
         <Moon size={64} fill="currentColor" strokeWidth={0} />
       </div>
-      <div className="absolute top-40 right-10 text-yellow-300 opacity-40 hidden md:block animate-bounce" style={{animationDelay: '0.5s'}}>
+      <div className="absolute top-40 right-10 text-yellow-300 opacity-40 hidden md:block animate-bounce" style={{ animationDelay: '0.5s' }}>
         <Star size={48} fill="currentColor" strokeWidth={0} />
       </div>
-      <div className="absolute top-60 left-1/4 text-yellow-300 opacity-30 hidden lg:block animate-pulse" style={{animationDelay: '1s'}}>
+      <div className="absolute top-60 left-1/4 text-yellow-300 opacity-30 hidden lg:block animate-pulse" style={{ animationDelay: '1s' }}>
         <Star size={36} fill="currentColor" strokeWidth={0} />
       </div>
-      <div className="absolute bottom-1/3 right-1/4 text-yellow-300 opacity-35 hidden lg:block animate-bounce" style={{animationDelay: '1.5s'}}>
+      <div className="absolute bottom-1/3 right-1/4 text-yellow-300 opacity-35 hidden lg:block animate-bounce" style={{ animationDelay: '1.5s' }}>
         <Moon size={48} fill="currentColor" strokeWidth={0} />
       </div>
-      <div className="absolute top-1/2 right-20 text-green-300 opacity-25 hidden lg:block animate-pulse" style={{animationDelay: '0.7s'}}>
+      <div className="absolute top-1/2 right-20 text-green-300 opacity-25 hidden lg:block animate-pulse" style={{ animationDelay: '0.7s' }}>
         <Star size={32} fill="currentColor" strokeWidth={0} />
       </div>
-      <div className="absolute bottom-1/4 left-20 text-blue-300 opacity-30 hidden lg:block animate-bounce" style={{animationDelay: '0.3s'}}>
+      <div className="absolute bottom-1/4 left-20 text-blue-300 opacity-30 hidden lg:block animate-bounce" style={{ animationDelay: '0.3s' }}>
         <Star size={40} fill="currentColor" strokeWidth={0} />
       </div>
       {/* Background Pattern */}
@@ -214,16 +215,16 @@ const App = () => {
       {/* --- 1. SECTION (HERO) --- */}
       <header className="pt-12 pb-16 px-4 max-w-6xl mx-auto relative z-10">
         {/* Floating Islamic theme elements around hero */}
-        <div className="absolute top-0 left-1/4 text-yellow-300 opacity-30 hidden md:block animate-floatUp" style={{animationDelay: '0s'}}>
+        <div className="absolute top-0 left-1/4 text-yellow-300 opacity-30 hidden md:block animate-floatUp" style={{ animationDelay: '0s' }}>
           <Star size={56} fill="currentColor" strokeWidth={0} />
         </div>
-        <div className="absolute top-10 right-1/4 text-blue-300 opacity-25 hidden md:block animate-floatUp" style={{animationDelay: '1s'}}>
+        <div className="absolute top-10 right-1/4 text-blue-300 opacity-25 hidden md:block animate-floatUp" style={{ animationDelay: '1s' }}>
           <Moon size={48} fill="currentColor" strokeWidth={0} />
         </div>
-        <div className="absolute -top-4 right-0 text-green-300 opacity-20 hidden lg:block animate-floatUp" style={{animationDelay: '0.5s'}}>
+        <div className="absolute -top-4 right-0 text-green-300 opacity-20 hidden lg:block animate-floatUp" style={{ animationDelay: '0.5s' }}>
           <Star size={40} fill="currentColor" strokeWidth={0} />
         </div>
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           {/* Left Column: Text & CTA */}
           <div className="lg:col-span-7 text-center lg:text-left space-y-6">
@@ -231,13 +232,13 @@ const App = () => {
               Perpustakaan Digital Anak Islam Terlengkap
             </div>
             <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold leading-tight drop-shadow-sm uppercase">
-              <span className="text-[#E65100]">Belajar Seru </span><br className="hidden lg:block"/>
+              <span className="text-[#E65100]">Belajar Seru </span><br className="hidden lg:block" />
               <span className="text-[#2E7D32]">Setiap Hari!</span>
             </h1>
             <p className="text-lg md:text-xl font-bold text-[#3E2723] max-w-2xl mx-auto lg:mx-0 leading-relaxed">
               Koleksi Ebook Spesial & Menarik untuk Membantu Buah Hati Mengenal Islam Lebih Dalam dengan Cara yang Menyenangkan.
             </p>
-            
+
             <div className="pt-2 flex justify-center lg:justify-start">
               {/* Quick CTA */}
               <button onClick={() => window.location.href = 'http://lynk.id/wira_arfi/4ox99vo1n8vm/checkout'} className="bg-green-600 text-white px-8 py-4 rounded-full font-bold text-lg md:text-xl shadow-lg border-2 border-green-400 hover:bg-green-700 transition animate-bounce flex items-center justify-center gap-2">
@@ -250,16 +251,16 @@ const App = () => {
           <div className="lg:col-span-5 flex justify-center relative">
             {/* Background decorative glow behind image */}
             <div className="absolute inset-0 bg-[#FFD54F]/20 rounded-full blur-3xl w-72 h-72 mx-auto my-auto animate-pulse"></div>
-            
+
             <div className="relative animate-floatUp max-w-sm md:max-w-md w-full border-4 border-white bg-white/50 backdrop-blur-md rounded-[2.5rem] p-4 shadow-2xl hover:scale-102 transition duration-300">
-              <img 
-                src="/hero-kids.png" 
-                alt="Muslim kids reading books illustration" 
+              <img
+                src="/hero-kids.png"
+                alt="Muslim kids reading books illustration"
                 className="rounded-[2rem] w-full h-auto object-cover shadow-inner"
               />
               {/* Small floating badge */}
               <div className="absolute -bottom-4 -right-4 bg-orange-500 text-white font-extrabold text-xs md:text-sm px-4 py-2.5 rounded-2xl shadow-lg border-2 border-white transform rotate-6 animate-pulse">
-                33+ Ebook Spesial! ✨
+                100+ Ebook Spesial! ✨
               </div>
             </div>
           </div>
@@ -267,38 +268,38 @@ const App = () => {
       </header>
 
       <main className="max-w-6xl mx-auto px-4 relative z-10 space-y-20">
-        
+
         {/* --- 2. KENAPA HARUS MEMBELI (FEATURES) --- */}
         <section className="bg-white p-8 md:p-12 rounded-[2.5rem] border-2 border-orange-100 shadow-xl relative">
           {/* Decorative elements */}
-          <div className="absolute -top-12 right-8 text-yellow-300 opacity-25 hidden lg:block animate-floatUp" style={{animationDelay: '0.2s'}}>
+          <div className="absolute -top-12 right-8 text-yellow-300 opacity-25 hidden lg:block animate-floatUp" style={{ animationDelay: '0.2s' }}>
             <Star size={44} fill="currentColor" strokeWidth={0} />
           </div>
-          <div className="absolute -bottom-8 left-8 text-blue-300 opacity-20 hidden lg:block animate-floatUp" style={{animationDelay: '1.2s'}}>
+          <div className="absolute -bottom-8 left-8 text-blue-300 opacity-20 hidden lg:block animate-floatUp" style={{ animationDelay: '1.2s' }}>
             <Moon size={40} fill="currentColor" strokeWidth={0} />
           </div>
-          
+
           <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-[#FFCC80] text-[#E65100] font-black px-4 md:px-8 py-2 rounded-full shadow-md text-xs sm:text-sm md:text-lg uppercase tracking-wider md:tracking-widest border-4 border-white whitespace-nowrap">
             Mengapa Bunda Harus Punya Ini?
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6">
-            <FeatureItem 
+            <FeatureItem
               icon={<BookOpen className="text-[#E65100] w-12 h-12" />}
               title="Konten Berkualitas & Terpercaya"
               desc="Disusun oleh tim berpengalaman dibidangnya, memastikan cerita sesuai dengan nilai-nilai Islam."
             />
-            <FeatureItem 
+            <FeatureItem
               icon={<Smile className="text-[#E65100] w-12 h-12" />}
               title="Bahasa Mudah Dipahami"
               desc="Menggunakan gaya bahasa yang ramah anak, interaktif, dan cocok untuk semua usia."
             />
-            <FeatureItem 
+            <FeatureItem
               icon={<Star className="text-[#E65100] w-12 h-12" fill="#FFE082" />}
               title="Edukasi Harian Menyenangkan"
               desc="Dilengkapi ilustrasi berwarna yang membuat belajar agama Islam jadi tidak membosankan."
             />
-            <FeatureItem 
+            <FeatureItem
               icon={<Smartphone className="text-[#E65100] w-12 h-12" />}
               title="Akses Fleksibel Kapan Saja"
               desc="Format digital (PDF) yang bisa dibaca di HP, Tablet, atau Laptop. Bahkan bisa dicetak sendiri!"
@@ -306,29 +307,29 @@ const App = () => {
           </div>
 
           <div className="flex flex-wrap justify-center gap-4 md:gap-6 mt-10 pt-8 border-t border-gray-100">
-            <BenefitIcon icon={<Book className="w-6 h-6 text-[#2E7D32]"/>} text="Ratusan Ebook" />
-            <BenefitIcon icon={<CheckCircle className="w-6 h-6 text-[#2E7D32]"/>} text="Materi Lengkap" />
-            <BenefitIcon icon={<ImageIcon className="w-6 h-6 text-[#E65100]"/>} text="Full Color" />
-            <BenefitIcon icon={<DownloadCloud className="w-6 h-6 text-blue-600"/>} text="Via Google Drive" />
+            <BenefitIcon icon={<Book className="w-6 h-6 text-[#2E7D32]" />} text="Ratusan Ebook" />
+            <BenefitIcon icon={<CheckCircle className="w-6 h-6 text-[#2E7D32]" />} text="Materi Lengkap" />
+            <BenefitIcon icon={<ImageIcon className="w-6 h-6 text-[#E65100]" />} text="Full Color" />
+            <BenefitIcon icon={<DownloadCloud className="w-6 h-6 text-blue-600" />} text="Via Google Drive" />
           </div>
         </section>
 
         {/* --- 4. SALES (BOOK SHOWCASE) --- */}
-        
+
 
         {/* --- 3. TESTIMONI --- */}
         <section id="testimoni" className="bg-[#FFF8E1] -mx-4 md:mx-0 px-4 py-12 md:rounded-[3rem] shadow-inner border-y border-yellow-200 relative">
           {/* Decorative Islamic theme elements */}
-          <div className="absolute top-8 left-8 text-yellow-300 opacity-30 hidden lg:block animate-floatUp" style={{animationDelay: '0.7s'}}>
+          <div className="absolute top-8 left-8 text-yellow-300 opacity-30 hidden lg:block animate-floatUp" style={{ animationDelay: '0.7s' }}>
             <Moon size={48} fill="currentColor" strokeWidth={0} />
           </div>
-          <div className="absolute bottom-12 right-8 text-green-300 opacity-25 hidden lg:block animate-floatUp" style={{animationDelay: '0.2s'}}>
+          <div className="absolute bottom-12 right-8 text-green-300 opacity-25 hidden lg:block animate-floatUp" style={{ animationDelay: '0.2s' }}>
             <Star size={40} fill="currentColor" strokeWidth={0} />
           </div>
-          <div className="absolute top-1/2 right-1/4 text-blue-300 opacity-20 hidden lg:block animate-floatUp" style={{animationDelay: '1.1s'}}>
+          <div className="absolute top-1/2 right-1/4 text-blue-300 opacity-20 hidden lg:block animate-floatUp" style={{ animationDelay: '1.1s' }}>
             <Star size={32} fill="currentColor" strokeWidth={0} />
           </div>
-          
+
           <div className="text-center mb-10">
             <h2 className="text-3xl md:text-4xl font-black text-[#F57F17] uppercase">Apa Kata Bunda?</h2>
             <p className="text-gray-700 font-medium mt-2">Mereka yang sudah merasakan manfaat perpustakaan digital ini.</p>
@@ -343,16 +344,16 @@ const App = () => {
         {/* --- BOOK GALLERY SECTION --- */}
         <section id="koleksi" className="py-16 relative">
           {/* Decorative elements */}
-          <div className="absolute top-0 left-8 text-yellow-300 opacity-25 hidden lg:block animate-floatUp" style={{animationDelay: '0.6s'}}>
+          <div className="absolute top-0 left-8 text-yellow-300 opacity-25 hidden lg:block animate-floatUp" style={{ animationDelay: '0.6s' }}>
             <Star size={48} fill="currentColor" strokeWidth={0} />
           </div>
-          <div className="absolute bottom-1/2 right-8 text-blue-300 opacity-20 hidden lg:block animate-floatUp" style={{animationDelay: '1.4s'}}>
+          <div className="absolute bottom-1/2 right-8 text-blue-300 opacity-20 hidden lg:block animate-floatUp" style={{ animationDelay: '1.4s' }}>
             <Moon size={40} fill="currentColor" strokeWidth={0} />
           </div>
 
           <div className="text-center mb-14">
             <h2 className="text-4xl md:text-5xl font-black text-[#2E7D32] uppercase drop-shadow-sm mb-3">Galeri Buku <span className="text-[#E65100]">Lengkap</span></h2>
-            <p className="text-gray-600 font-medium text-lg">Lihat 33+ Koleksi Buku Islam Berkualitas untuk Anak-Anak Tercinta</p>
+            <p className="text-gray-600 font-medium text-lg">Lihat 100+ Koleksi Buku Islam Berkualitas untuk Anak-Anak Tercinta</p>
           </div>
 
           <div className="relative max-w-7xl mx-auto">
@@ -385,9 +386,8 @@ const App = () => {
                 <button
                   key={idx}
                   onClick={() => setCurrentSlide(idx)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    idx === currentSlide ? 'bg-[#E65100] w-8' : 'bg-gray-300 hover:bg-gray-400'
-                  }`}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${idx === currentSlide ? 'bg-[#E65100] w-8' : 'bg-gray-300 hover:bg-gray-400'
+                    }`}
                 />
               ))}
             </div>
@@ -410,7 +410,7 @@ const App = () => {
 
         {/* --- 5. COUNTDOWN PROMO SEIKHLASNYA --- */}
         <section className="max-w-4xl mx-auto relative mt-8">
-          
+
           {/* Countdown Header */}
           <div className="bg-[#B71C1C] text-white text-center py-4 px-6 rounded-t-3xl border-4 border-b-0 border-[#D32F2F] flex flex-col md:flex-row items-center justify-center gap-4 relative z-10 -mb-4 shadow-lg">
             <div className="flex items-center gap-2">
@@ -418,36 +418,36 @@ const App = () => {
               <span className="font-bold text-lg uppercase tracking-wider">Promo Berakhir Dalam:</span>
             </div>
             <div className="flex gap-2 text-2xl font-black">
-              <div className="bg-white text-[#B71C1C] px-3 py-1 rounded-lg">{h}</div> : 
-              <div className="bg-white text-[#B71C1C] px-3 py-1 rounded-lg">{m}</div> : 
+              <div className="bg-white text-[#B71C1C] px-3 py-1 rounded-lg">{h}</div> :
+              <div className="bg-white text-[#B71C1C] px-3 py-1 rounded-lg">{m}</div> :
               <div className="bg-white text-[#B71C1C] px-3 py-1 rounded-lg">{s}</div>
             </div>
           </div>
 
           <div className="bg-[#2E7D32] rounded-b-3xl md:rounded-b-[2.5rem] p-8 md:p-12 text-white shadow-2xl relative overflow-hidden border-4 border-green-800/30">
             {/* Decorative Islamic theme elements for promo section */}
-            <div className="absolute top-8 right-16 text-green-200 opacity-15 hidden lg:block animate-floatUp" style={{animationDelay: '0.4s'}}>
+            <div className="absolute top-8 right-16 text-green-200 opacity-15 hidden lg:block animate-floatUp" style={{ animationDelay: '0.4s' }}>
               <Star size={56} fill="currentColor" strokeWidth={0} />
             </div>
-            <div className="absolute bottom-20 left-12 text-yellow-200 opacity-12 hidden lg:block animate-floatUp" style={{animationDelay: '0.8s'}}>
+            <div className="absolute bottom-20 left-12 text-yellow-200 opacity-12 hidden lg:block animate-floatUp" style={{ animationDelay: '0.8s' }}>
               <Moon size={52} fill="currentColor" strokeWidth={0} />
             </div>
-            <div className="absolute top-1/3 right-1/3 text-blue-200 opacity-10 hidden lg:block animate-floatUp" style={{animationDelay: '1.3s'}}>
+            <div className="absolute top-1/3 right-1/3 text-blue-200 opacity-10 hidden lg:block animate-floatUp" style={{ animationDelay: '1.3s' }}>
               <Star size={44} fill="currentColor" strokeWidth={0} />
             </div>
-            
+
             <div className="absolute -left-12 -bottom-12 opacity-10 transform -rotate-12">
               <Gift className="w-64 h-64" />
             </div>
             <div className="absolute -right-8 top-0 opacity-10">
               <Star className="w-48 h-48" fill="white" />
             </div>
-            
+
             <div className="relative z-10 flex flex-col items-center pt-4">
               <h2 className="text-2xl sm:text-4xl md:text-6xl font-black mb-8 text-center drop-shadow-lg tracking-wider text-[#FFEB3B]">
                 DAPATKAN PAKET BUKU
               </h2>
-              
+
               <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 w-full mb-10">
                 <div className="flex flex-col items-center justify-center relative">
                   <span className="text-white text-xl font-bold uppercase tracking-widest mb-1">Harga Normal</span>
@@ -456,9 +456,9 @@ const App = () => {
                     <div className="absolute top-1/2 left-0 w-full h-2 bg-red-600 transform -rotate-3 rounded-full"></div>
                   </div>
                 </div>
-                
+
                 <div className="bg-[#FF9800] text-white px-6 md:px-12 py-4 md:py-6 rounded-3xl md:rounded-4xl font-black text-center shadow-[0_8px_0_#E65100] md:shadow-[0_10px_0_#E65100] border-4 border-white transform transition hover:-translate-y-1 hover:shadow-[0_12px_0_#E65100] md:hover:shadow-[0_15px_0_#E65100] cursor-default mt-4 md:mt-0">
-                  <span className="text-2xl sm:text-3xl md:text-5xl drop-shadow-md leading-tight text-white">CUKUP BAYAR<br/><span className="text-[#FFFDE7]">SEIKHLASNYA!</span></span>
+                  <span className="text-2xl sm:text-3xl md:text-5xl drop-shadow-md leading-tight text-white">CUKUP BAYAR<br /><span className="text-[#FFFDE7]">SEIKHLASNYA!</span></span>
                 </div>
               </div>
 
@@ -482,40 +482,40 @@ const App = () => {
             <h2 className="text-3xl md:text-4xl font-black text-[#E65100] uppercase drop-shadow-sm">Cara Order Sangat Mudah!</h2>
             <p className="text-gray-600 font-medium mt-2">Ikuti 5 langkah simpel di halaman checkout nanti</p>
           </div>
-          
+
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6 md:gap-4 max-w-5xl mx-auto relative">
             {/* Garis Penghubung (Hanya Desktop) */}
             <div className="hidden md:block absolute top-10 left-10 right-10 h-1 bg-orange-200 -z-10"></div>
-            
-            <InfographicStep 
-              num="1" 
-              icon={<Heart className="w-8 h-8" />} 
-              title="Isi Nominal" 
-              desc="Ketik harga seikhlasnya di kolom yang tersedia." 
+
+            <InfographicStep
+              num="1"
+              icon={<Heart className="w-8 h-8" />}
+              title="Isi Nominal"
+              desc="Ketik harga seikhlasnya di kolom yang tersedia."
             />
-            <InfographicStep 
-              num="2" 
-              icon={<FileText className="w-8 h-8" />} 
-              title="Isi Data Diri" 
-              desc="Lengkapi Email, Nama & Nomor WhatsApp." 
+            <InfographicStep
+              num="2"
+              icon={<FileText className="w-8 h-8" />}
+              title="Isi Data Diri"
+              desc="Lengkapi Email, Nama & Nomor WhatsApp."
             />
-            <InfographicStep 
-              num="3" 
-              icon={<CreditCard className="w-8 h-8" />} 
-              title="Pilih Metode & Bayar" 
-              desc="Pilih QRIS/E-Wallet/Transfer, dan Konfirmasi!" 
+            <InfographicStep
+              num="3"
+              icon={<CreditCard className="w-8 h-8" />}
+              title="Pilih Metode & Bayar"
+              desc="Pilih QRIS/E-Wallet/Transfer, dan Konfirmasi!"
             />
-            <InfographicStep 
-              num="4" 
-              icon={<CheckSquare className="w-8 h-8" />} 
-              title="Centang S&K" 
-              desc="Centang kotak persetujuan 'Terms of Use'." 
+            <InfographicStep
+              num="4"
+              icon={<CheckSquare className="w-8 h-8" />}
+              title="Centang S&K"
+              desc="Centang kotak persetujuan 'Terms of Use'."
             />
-            <InfographicStep 
-              num="5" 
-              icon={<MousePointerClick className="w-8 h-8" />} 
-              title="Klik Buy Now" 
-              desc="Tekan tombol 'Buy Now' berwarna hijau." 
+            <InfographicStep
+              num="5"
+              icon={<MousePointerClick className="w-8 h-8" />}
+              title="Klik Buy Now"
+              desc="Tekan tombol 'Buy Now' berwarna hijau."
             />
           </div>
         </section>
@@ -544,10 +544,10 @@ const App = () => {
         <div className="absolute top-10 right-10 text-yellow-500 opacity-10 pointer-events-none animate-pulse">
           <Star size={40} fill="currentColor" strokeWidth={0} />
         </div>
-        <div className="absolute bottom-10 left-10 text-yellow-500 opacity-10 pointer-events-none animate-bounce" style={{animationDelay: '1s'}}>
+        <div className="absolute bottom-10 left-10 text-yellow-500 opacity-10 pointer-events-none animate-bounce" style={{ animationDelay: '1s' }}>
           <Moon size={48} fill="currentColor" strokeWidth={0} />
         </div>
-        
+
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 relative z-10">
           {/* Column 1: Brand & Logo */}
           <div className="space-y-4">
@@ -574,7 +574,7 @@ const App = () => {
               </a>
             </div>
           </div>
-          
+
           {/* Column 2: Quick Links */}
           <div className="space-y-4">
             <h4 className="font-bold text-lg text-white border-b-2 border-[#E65100]/30 pb-2 inline-block">Menu Navigasi</h4>
@@ -723,8 +723,8 @@ const InfographicStep = ({ num, icon, title, desc }: { num: string; icon: React.
 const BookGalleryItem = ({ src, title }: { src: string; title: string }) => (
   <div className="group relative bg-white rounded-2xl shadow-md border border-orange-100 overflow-hidden hover:shadow-2xl transition-all transform hover:-translate-y-2 duration-300">
     <div className="relative w-full h-64 md:h-72 overflow-hidden bg-gray-100">
-      <img 
-        src={src} 
+      <img
+        src={src}
         alt={title}
         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
       />
