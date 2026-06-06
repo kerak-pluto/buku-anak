@@ -212,7 +212,7 @@ const App = () => {
       </div>
 
       {/* --- 1. SECTION (HERO) --- */}
-      <header className="pt-12 pb-16 px-4 text-center max-w-5xl mx-auto relative z-10">
+      <header className="pt-12 pb-16 px-4 max-w-6xl mx-auto relative z-10">
         {/* Floating Islamic theme elements around hero */}
         <div className="absolute top-0 left-1/4 text-yellow-300 opacity-30 hidden md:block animate-floatUp" style={{animationDelay: '0s'}}>
           <Star size={56} fill="currentColor" strokeWidth={0} />
@@ -224,21 +224,46 @@ const App = () => {
           <Star size={40} fill="currentColor" strokeWidth={0} />
         </div>
         
-        <div className="inline-block bg-[#6D4C41] text-white px-6 py-2 rounded-full font-bold text-sm md:text-lg mb-6 shadow-md uppercase tracking-wide border-2 border-white">
-          Perpustakaan Digital Anak Islam Terlengkap
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          {/* Left Column: Text & CTA */}
+          <div className="lg:col-span-7 text-center lg:text-left space-y-6">
+            <div className="inline-block bg-[#6D4C41] text-white px-6 py-2 rounded-full font-bold text-sm md:text-lg mb-2 shadow-md uppercase tracking-wide border-2 border-white">
+              Perpustakaan Digital Anak Islam Terlengkap
+            </div>
+            <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold leading-tight drop-shadow-sm uppercase">
+              <span className="text-[#E65100]">Belajar Seru </span><br className="hidden lg:block"/>
+              <span className="text-[#2E7D32]">Setiap Hari!</span>
+            </h1>
+            <p className="text-lg md:text-xl font-bold text-[#3E2723] max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+              Koleksi Ebook Spesial & Menarik untuk Membantu Buah Hati Mengenal Islam Lebih Dalam dengan Cara yang Menyenangkan.
+            </p>
+            
+            <div className="pt-2 flex justify-center lg:justify-start">
+              {/* Quick CTA */}
+              <button onClick={() => window.location.href = 'http://lynk.id/wira_arfi/4ox99vo1n8vm/checkout'} className="bg-green-600 text-white px-8 py-4 rounded-full font-bold text-lg md:text-xl shadow-lg border-2 border-green-400 hover:bg-green-700 transition animate-bounce flex items-center justify-center gap-2">
+                Ambil Promo Sekarang <MousePointerClick size={24} />
+              </button>
+            </div>
+          </div>
+
+          {/* Right Column: Hero Image */}
+          <div className="lg:col-span-5 flex justify-center relative">
+            {/* Background decorative glow behind image */}
+            <div className="absolute inset-0 bg-[#FFD54F]/20 rounded-full blur-3xl w-72 h-72 mx-auto my-auto animate-pulse"></div>
+            
+            <div className="relative animate-floatUp max-w-sm md:max-w-md w-full border-4 border-white bg-white/50 backdrop-blur-md rounded-[2.5rem] p-4 shadow-2xl hover:scale-102 transition duration-300">
+              <img 
+                src="/hero-kids.png" 
+                alt="Muslim kids reading books illustration" 
+                className="rounded-[2rem] w-full h-auto object-cover shadow-inner"
+              />
+              {/* Small floating badge */}
+              <div className="absolute -bottom-4 -right-4 bg-orange-500 text-white font-extrabold text-xs md:text-sm px-4 py-2.5 rounded-2xl shadow-lg border-2 border-white transform rotate-6 animate-pulse">
+                33+ Ebook Spesial! ✨
+              </div>
+            </div>
+          </div>
         </div>
-        <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight drop-shadow-sm uppercase">
-          <span className="text-[#E65100]">Belajar Seru </span><br className="hidden md:block"/>
-          <span className="text-[#2E7D32]">Setiap Hari!</span>
-        </h1>
-        <p className="mt-6 text-xl md:text-2xl font-bold text-[#3E2723] max-w-3xl mx-auto">
-          Koleksi Ebook Spesial & Menarik untuk Membantu Buah Hati Mengenal Islam Lebih Dalam.
-        </p>
-        
-        {/* Quick CTA */}
-        <button onClick={() => window.location.href = 'http://lynk.id/wira_arfi/4ox99vo1n8vm/checkout'} className="mt-8 bg-green-600 text-white px-8 py-4 rounded-full font-bold text-xl shadow-lg border-2 border-green-400 hover:bg-green-700 transition animate-bounce flex items-center justify-center gap-2 mx-auto">
-          Ambil Promo Sekarang <MousePointerClick size={24} />
-        </button>
       </header>
 
       <main className="max-w-6xl mx-auto px-4 relative z-10 space-y-20">
