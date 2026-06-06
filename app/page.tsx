@@ -262,7 +262,7 @@ const App = () => {
             <div className="inline-block bg-[#6D4C41] text-white px-6 py-2 rounded-full font-bold text-xs sm:text-sm md:text-base mb-2 shadow-md uppercase tracking-wide border-2 border-white hover-jiggle cursor-pointer transition">
               🎉 100+ Ebook & Worksheet Digital Anak Muslim
             </div>
-            <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold leading-tight drop-shadow-sm uppercase">
+            <h1 className="text-2xl sm:text-4xl md:text-5xl font-extrabold leading-tight drop-shadow-sm uppercase">
               <span className="text-[#3E2723]">Didik Anak Anda dengan </span><br className="hidden lg:block" />
               <span className={`inline-block text-[#E65100] transition-all duration-300 transform ${heroFade ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 -translate-y-2 scale-95'}`}>
                 {heroWords[heroWordIdx]}
