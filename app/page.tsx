@@ -83,6 +83,22 @@ const App = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [booksPerSlide, setBooksPerSlide] = useState(10);
 
+  // --- STATE UNTUK DYNAMIC HERO TEXT ANIMATION ---
+  const heroWords = ["Cara Menyenangkan", "Kisah Menginspirasi", "Doa & Adab Harian", "Aktivitas Kreatif"];
+  const [heroWordIdx, setHeroWordIdx] = useState(0);
+  const [heroFade, setHeroFade] = useState(true);
+
+  useEffect(() => {
+    const wordInterval = setInterval(() => {
+      setHeroFade(false);
+      setTimeout(() => {
+        setHeroWordIdx((prev) => (prev + 1) % heroWords.length);
+        setHeroFade(true);
+      }, 300); // matches the transition duration
+    }, 3000);
+    return () => clearInterval(wordInterval);
+  }, []);
+
   // Handle responsive books per slide
   useEffect(() => {
     const handleResize = () => {
@@ -243,15 +259,17 @@ const App = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           {/* Left Column: Text & CTA */}
           <div className="lg:col-span-7 text-center lg:text-left space-y-6">
-            <div className="inline-block bg-[#6D4C41] text-white px-6 py-2 rounded-full font-bold text-sm md:text-lg mb-2 shadow-md uppercase tracking-wide border-2 border-white hover-jiggle cursor-pointer transition">
-              Perpustakaan Digital Anak Islam Terlengkap
+            <div className="inline-block bg-[#6D4C41] text-white px-6 py-2 rounded-full font-bold text-xs sm:text-sm md:text-base mb-2 shadow-md uppercase tracking-wide border-2 border-white hover-jiggle cursor-pointer transition">
+              🎉 100+ Ebook & Worksheet Digital Anak Muslim
             </div>
             <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold leading-tight drop-shadow-sm uppercase">
-              <span className="text-[#E65100]">Belajar Seru </span><br className="hidden lg:block" />
-              <span className="text-[#2E7D32]">Setiap Hari!</span>
+              <span className="text-[#3E2723]">Didik Anak Islam dengan </span><br className="hidden lg:block" />
+              <span className={`inline-block text-[#E65100] transition-all duration-300 transform ${heroFade ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 -translate-y-2 scale-95'}`}>
+                {heroWords[heroWordIdx]}
+              </span>
             </h1>
-            <p className="text-lg md:text-xl font-bold text-[#3E2723] max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-              Koleksi Ebook Spesial & Menarik untuk Membantu Buah Hati Mengenal Islam Lebih Dalam dengan Cara yang Menyenangkan.
+            <p className="text-base sm:text-lg md:text-xl font-medium text-gray-700 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+              Bantu Ayah & Bunda menanamkan rasa cinta kepada Allah, Rasul-Nya, dan adab mulia melalui ratusan ebook interaktif, cerita bergambar, serta worksheet aktivitas seru. Cukup bayar seikhlasnya!
             </p>
 
             <div className="pt-2 flex justify-center lg:justify-start">
