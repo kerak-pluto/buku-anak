@@ -263,7 +263,7 @@ const App = () => {
               🎉 100+ Ebook & Worksheet Digital Anak Muslim
             </div>
             <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold leading-tight drop-shadow-sm uppercase">
-              <span className="text-[#3E2723]">Didik Anak Islam dengan </span><br className="hidden lg:block" />
+              <span className="text-[#3E2723]">Didik Anak Anda dengan </span><br className="hidden lg:block" />
               <span className={`inline-block text-[#E65100] transition-all duration-300 transform ${heroFade ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 -translate-y-2 scale-95'}`}>
                 {heroWords[heroWordIdx]}
               </span>
@@ -447,29 +447,29 @@ const App = () => {
           <div className="absolute -top-10 -right-10 text-yellow-100 pointer-events-none opacity-40">
             <Gift size={150} fill="currentColor" strokeWidth={0} />
           </div>
-          
+
           <div className="text-center mb-8 relative z-10">
             <h2 className="text-3xl md:text-4xl font-black text-[#2E7D32] uppercase">Detail Nilai Paket Ebook</h2>
             <p className="text-gray-600 font-semibold mt-2">Nilai riil yang akan Ayah & Bunda dapatkan di paket ini:</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 relative z-10 mb-8">
-            <ValueItem 
+            <ValueItem
               title="100+ Ebook Cerita & Doa Bergambar"
               value="Rp 1.500.000"
               desc="Ilustrasi berwarna kualitas premium tentang kisah Nabi, moral, adab & doa harian."
             />
-            <ValueItem 
+            <ValueItem
               title="Worksheet & Buku Aktivitas Interaktif"
               value="Rp 350.000"
               desc="Lembar kerja belajar menulis, mewarnai, teka-teki silang, dan gunting tempel islami."
             />
-            <ValueItem 
+            <ValueItem
               title="Update Ebook Baru Gratis Selamanya"
               value="Rp 500.000"
               desc="Dapatkan akses otomatis ke judul-judul baru yang kami tambahkan secara berkala di masa depan."
             />
-            <ValueItem 
+            <ValueItem
               title="Akses Cloud Drive & Layanan Premium"
               value="Rp 150.000"
               desc="Tautan Google Drive yang aktif selamanya tanpa batas kuota beserta bantuan chat admin."
