@@ -178,6 +178,21 @@ const App = () => {
         .animate-slideIn {
           animation: slideIn 0.3s ease-out;
         }
+        @keyframes jiggle {
+          0%, 100% { transform: scale(1) rotate(0deg); }
+          25% { transform: scale(1.05) rotate(-1.5deg); }
+          75% { transform: scale(1.05) rotate(1.5deg); }
+        }
+        .hover-jiggle:hover {
+          animation: jiggle 0.4s ease-in-out infinite;
+        }
+        @keyframes pulse-slow {
+          0%, 100% { transform: scale(1); opacity: 0.95; }
+          50% { transform: scale(1.02); opacity: 1; }
+        }
+        .animate-pulse-slow {
+          animation: pulse-slow 3s ease-in-out infinite;
+        }
       `}} />
 
       {/* --- 7. ORDER RUNNING TEXT (TOP BAR) --- */}
@@ -228,7 +243,7 @@ const App = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           {/* Left Column: Text & CTA */}
           <div className="lg:col-span-7 text-center lg:text-left space-y-6">
-            <div className="inline-block bg-[#6D4C41] text-white px-6 py-2 rounded-full font-bold text-sm md:text-lg mb-2 shadow-md uppercase tracking-wide border-2 border-white">
+            <div className="inline-block bg-[#6D4C41] text-white px-6 py-2 rounded-full font-bold text-sm md:text-lg mb-2 shadow-md uppercase tracking-wide border-2 border-white hover-jiggle cursor-pointer transition">
               Perpustakaan Digital Anak Islam Terlengkap
             </div>
             <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold leading-tight drop-shadow-sm uppercase">
@@ -394,7 +409,7 @@ const App = () => {
           </div>
 
           <div className="text-center mt-12">
-            <button onClick={() => window.location.href = 'http://lynk.id/wira_arfi/4ox99vo1n8vm/checkout'} className="bg-linear-to-r from-[#E65100] to-[#FF7043] text-white px-8 py-4 rounded-full font-bold text-lg shadow-lg border-2 border-orange-400 hover:shadow-xl transition transform hover:scale-105">
+            <button onClick={() => window.location.href = 'http://lynk.id/wira_arfi/4ox99vo1n8vm/checkout'} className="bg-linear-to-r from-[#E65100] to-[#FF7043] text-white px-8 py-4 rounded-full font-bold text-lg shadow-lg border-2 border-orange-400 hover:shadow-xl transition transform hover:scale-105 hover-jiggle">
               Dapatkan Semua Koleksi Ini Sekarang!
             </button>
           </div>
@@ -407,6 +422,52 @@ const App = () => {
             Dukung tumbuh kembang anak Anda dengan bacaan islami yang bermanfaat HARI INI JUGA!
           </p>
         </div>
+
+        {/* --- VALUE BREAKDOWN SECTION --- */}
+        <section className="max-w-4xl mx-auto bg-white rounded-[2.5rem] border-2 border-green-100 p-8 md:p-12 shadow-xl relative overflow-hidden">
+          {/* Decorative icons inside background */}
+          <div className="absolute -top-10 -right-10 text-yellow-100 pointer-events-none opacity-40">
+            <Gift size={150} fill="currentColor" strokeWidth={0} />
+          </div>
+          
+          <div className="text-center mb-8 relative z-10">
+            <h2 className="text-3xl md:text-4xl font-black text-[#2E7D32] uppercase">Detail Nilai Paket Ebook</h2>
+            <p className="text-gray-600 font-semibold mt-2">Nilai riil yang akan Ayah & Bunda dapatkan di paket ini:</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 relative z-10 mb-8">
+            <ValueItem 
+              title="100+ Ebook Cerita & Doa Bergambar"
+              value="Rp 1.500.000"
+              desc="Ilustrasi berwarna kualitas premium tentang kisah Nabi, moral, adab & doa harian."
+            />
+            <ValueItem 
+              title="Worksheet & Buku Aktivitas Interaktif"
+              value="Rp 350.000"
+              desc="Lembar kerja belajar menulis, mewarnai, teka-teki silang, dan gunting tempel islami."
+            />
+            <ValueItem 
+              title="Update Ebook Baru Gratis Selamanya"
+              value="Rp 500.000"
+              desc="Dapatkan akses otomatis ke judul-judul baru yang kami tambahkan secara berkala di masa depan."
+            />
+            <ValueItem 
+              title="Akses Cloud Drive & Layanan Premium"
+              value="Rp 150.000"
+              desc="Tautan Google Drive yang aktif selamanya tanpa batas kuota beserta bantuan chat admin."
+            />
+          </div>
+
+          <div className="bg-[#FFF8E1] border-2 border-yellow-200 rounded-3xl p-6 flex flex-col md:flex-row items-center justify-between gap-4 relative z-10 animate-pulse-slow">
+            <div>
+              <span className="text-gray-500 font-bold uppercase text-xs tracking-wider">Total Nilai Sebenarnya:</span>
+              <div className="text-3xl font-black text-[#E65100]">Rp 2.500.000+</div>
+            </div>
+            <div className="bg-[#2E7D32] text-white px-6 py-3 rounded-2xl font-black text-sm uppercase tracking-wide border-2 border-green-400 shadow-md hover-jiggle cursor-default transition">
+              Cukup Bayar Seikhlasnya! 💖
+            </div>
+          </div>
+        </section>
 
         {/* --- 5. COUNTDOWN PROMO SEIKHLASNYA --- */}
         <section className="max-w-4xl mx-auto relative mt-8">
@@ -457,13 +518,13 @@ const App = () => {
                   </div>
                 </div>
 
-                <div className="bg-[#FF9800] text-white px-6 md:px-12 py-4 md:py-6 rounded-3xl md:rounded-4xl font-black text-center shadow-[0_8px_0_#E65100] md:shadow-[0_10px_0_#E65100] border-4 border-white transform transition hover:-translate-y-1 hover:shadow-[0_12px_0_#E65100] md:hover:shadow-[0_15px_0_#E65100] cursor-default mt-4 md:mt-0">
+                <div className="bg-[#FF9800] text-white px-6 md:px-12 py-4 md:py-6 rounded-3xl md:rounded-4xl font-black text-center shadow-[0_8px_0_#E65100] md:shadow-[0_10px_0_#E65100] border-4 border-white transform transition hover:-translate-y-1 hover:shadow-[0_12px_0_#E65100] md:hover:shadow-[0_15px_0_#E65100] cursor-default mt-4 md:mt-0 hover-jiggle animate-pulse-slow">
                   <span className="text-2xl sm:text-3xl md:text-5xl drop-shadow-md leading-tight text-white">CUKUP BAYAR<br /><span className="text-[#FFFDE7]">SEIKHLASNYA!</span></span>
                 </div>
               </div>
 
               {/* FINAL CTA BUTTON */}
-              <button onClick={() => window.location.href = 'http://lynk.id/wira_arfi/4ox99vo1n8vm/checkout'} className="group relative bg-linear-to-b from-white to-gray-100 hover:from-green-50 hover:to-white text-[#2E7D32] rounded-full px-6 md:px-16 py-4 md:py-6 shadow-2xl transform transition hover:scale-105 active:scale-95 w-full md:w-auto flex flex-col items-center justify-center gap-2">
+              <button onClick={() => window.location.href = 'http://lynk.id/wira_arfi/4ox99vo1n8vm/checkout'} className="group relative bg-linear-to-b from-white to-gray-100 hover:from-green-50 hover:to-white text-[#2E7D32] rounded-full px-6 md:px-16 py-4 md:py-6 shadow-2xl transform transition hover:scale-105 active:scale-95 w-full md:w-auto flex flex-col items-center justify-center gap-2 hover-jiggle">
                 <div className="flex items-center gap-3">
                   <span className="text-xl sm:text-2xl md:text-4xl font-black drop-shadow-sm">DAPATKAN SEKARANG!</span>
                   <MousePointerClick className="w-8 h-8 hidden md:block text-[#E65100] animate-bounce" />
@@ -670,7 +731,7 @@ const BookCover = ({ title, subtitle, bg, borderColor, isDark = false }: { title
 );
 
 const FeatureItem = ({ icon, title, desc }: { icon: React.ReactNode; title: string; desc: string }) => (
-  <div className="flex items-start space-x-5 group hover:bg-orange-50 p-4 rounded-2xl transition-colors border border-transparent hover:border-orange-100">
+  <div className="flex items-start space-x-5 group hover:bg-orange-50 p-4 rounded-2xl transition-all duration-300 border border-transparent hover:border-orange-100 hover:scale-102 hover:shadow-sm cursor-pointer">
     <div className="shrink-0 mt-1 bg-orange-100/50 p-4 rounded-2xl group-hover:bg-orange-200 transition-colors shadow-sm">
       {icon}
     </div>
@@ -682,14 +743,14 @@ const FeatureItem = ({ icon, title, desc }: { icon: React.ReactNode; title: stri
 );
 
 const BenefitIcon = ({ icon, text }: { icon: React.ReactNode; text: string }) => (
-  <div className="flex items-center space-x-3 bg-[#FDF9F1] px-5 py-3 rounded-xl shadow-sm border border-gray-200">
+  <div className="flex items-center space-x-3 bg-[#FDF9F1] px-5 py-3 rounded-xl shadow-sm border border-gray-200 hover:scale-105 hover:border-orange-200 hover:shadow-md transition-all duration-300 cursor-pointer">
     <div className="shrink-0 bg-white p-1.5 rounded-full shadow-sm">{icon}</div>
     <p className="text-sm font-bold text-gray-800 leading-tight">{text}</p>
   </div>
 );
 
 const TestimonialCard = ({ name, text, rating }: { name: string; text: string; rating: number }) => (
-  <div className="bg-white p-6 rounded-3xl shadow-md border border-yellow-100 relative pt-10 mt-6">
+  <div className="bg-white p-6 rounded-3xl shadow-md border border-yellow-100 relative pt-10 mt-6 hover:scale-105 hover:shadow-lg transition-all duration-300">
     <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-yellow-100 p-3 rounded-full border-4 border-white shadow-sm">
       <User className="w-8 h-8 text-yellow-600" />
     </div>
@@ -706,7 +767,7 @@ const TestimonialCard = ({ name, text, rating }: { name: string; text: string; r
 );
 
 const InfographicStep = ({ num, icon, title, desc }: { num: string; icon: React.ReactNode; title: string; desc: string }) => (
-  <div className="flex flex-col items-center text-center relative w-full">
+  <div className="flex flex-col items-center text-center relative w-full hover:scale-105 transition-all duration-300">
     <div className="bg-linear-to-br from-[#E65100] to-[#FF7043] text-white rounded-full w-12 h-12 md:w-16 md:h-16 flex items-center justify-center font-black text-xl md:text-2xl shadow-lg mb-3 md:mb-4 relative z-10 border-4 border-white shrink-0">
       {num}
     </div>
@@ -717,6 +778,16 @@ const InfographicStep = ({ num, icon, title, desc }: { num: string; icon: React.
       <h3 className="font-bold text-base md:text-lg text-gray-900 mb-1 md:mb-2">{title}</h3>
       <p className="text-xs md:text-sm text-gray-600 leading-relaxed">{desc}</p>
     </div>
+  </div>
+);
+
+const ValueItem = ({ title, value, desc }: { title: string; value: string; desc: string }) => (
+  <div className="bg-[#FDF9F1] border border-orange-100 rounded-2xl p-5 hover:border-orange-200 transition-all duration-300 hover:shadow-md group">
+    <div className="flex justify-between items-start gap-4 mb-2">
+      <h3 className="font-extrabold text-base md:text-lg text-gray-900 leading-tight group-hover:text-[#E65100] transition-colors">{title}</h3>
+      <span className="bg-red-100 text-red-600 text-xs font-black px-2.5 py-1 rounded-lg shrink-0">{value}</span>
+    </div>
+    <p className="text-xs md:text-sm text-gray-600 font-medium leading-relaxed">{desc}</p>
   </div>
 );
 
