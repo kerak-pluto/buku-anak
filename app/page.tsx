@@ -77,7 +77,7 @@ const booksData = [
 
 const App = () => {
   // --- STATE UNTUK COUNTDOWN & NOTIFIKASI ---
-  const [timeLeft, setTimeLeft] = useState(3600 * 5 + 1800 + 45); // 5 Jam 30 Menit 45 Detik
+  const [timeLeft, setTimeLeft] = useState(180); // 3 Menit
   const [notifIndex, setNotifIndex] = useState(0);
   const [showNotif, setShowNotif] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -564,6 +564,20 @@ const App = () => {
 
                 <div className="bg-[#FF9800] text-white px-6 md:px-12 py-4 md:py-6 rounded-3xl md:rounded-4xl font-black text-center shadow-[0_8px_0_#E65100] md:shadow-[0_10px_0_#E65100] border-4 border-white transform transition hover:-translate-y-1 hover:shadow-[0_12px_0_#E65100] md:hover:shadow-[0_15px_0_#E65100] cursor-default mt-4 md:mt-0 hover-jiggle animate-pulse-slow">
                   <span className="text-2xl sm:text-3xl md:text-5xl drop-shadow-md leading-tight text-white">CUKUP BAYAR<br /><span className="text-[#FFFDE7]">SEIKHLASNYA!</span></span>
+                </div>
+              </div>
+
+              {/* Progress Bar Kuota */}
+              <div className="w-full max-w-md mb-8 px-4 flex flex-col items-center">
+                <div className="flex justify-between w-full text-xs sm:text-sm font-extrabold text-white mb-2">
+                  <span className="flex items-center gap-1">🔥 Sisa Kuota Promo: <span className="text-yellow-300 animate-pulse">7 Paket Lagi!</span></span>
+                  <span>93% Terklaim</span>
+                </div>
+                <div className="w-full bg-[#1B5E20] border-2 border-green-700/50 rounded-full h-5 p-0.5 overflow-hidden shadow-inner">
+                  <div 
+                    className="bg-linear-to-r from-red-600 via-orange-500 to-yellow-400 h-full rounded-full animate-pulse transition-all duration-1000"
+                    style={{ width: '93%' }}
+                  />
                 </div>
               </div>
 
