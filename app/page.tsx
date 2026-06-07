@@ -282,8 +282,21 @@ const App = () => {
               </span>
             </h1>
             <p className="text-base sm:text-lg md:text-xl font-medium text-gray-700 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-              Bantu Ayah & Bunda menanamkan rasa cinta kepada Allah, Rasul-Nya, dan adab mulia melalui ratusan ebook interaktif, cerita bergambar, serta worksheet aktivitas seru. Cukup bayar seikhlasnya!
+              Bantu Ayah & Bunda menanamkan rasa cinta kepada Allah, Rasul-Nya, dan adab mulia melalui ratusan ebook interaktif, cerita bergambar, serta worksheet aktivitas seru.
             </p>
+
+            {/* Pricing Highlight block */}
+            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 bg-white/80 backdrop-blur-xs p-4 rounded-3xl border border-orange-100 shadow-md max-w-md mx-auto lg:mx-0">
+              <div className="text-center lg:text-left">
+                <span className="text-xs text-gray-500 font-bold uppercase block tracking-wider">Nilai Total Paket:</span>
+                <span className="text-lg font-black text-gray-400 line-through">Rp 1.999.000</span>
+              </div>
+              <div className="h-px w-8 bg-gray-200 sm:h-8 sm:w-px hidden sm:block"></div>
+              <div className="text-center lg:text-left">
+                <span className="text-xs text-red-600 font-extrabold uppercase block tracking-wider animate-pulse">Spesial Hari Ini:</span>
+                <span className="text-xl font-black text-red-600">Cukup Bayar Seikhlasnya! 💖</span>
+              </div>
+            </div>
 
             <div className="pt-2 flex justify-center lg:justify-start">
               {/* Quick CTA */}
