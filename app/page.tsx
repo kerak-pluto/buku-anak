@@ -298,6 +298,30 @@ const App = () => {
               </div>
             </div>
 
+            {/* Countdown & Quota on Top (Hero Section) */}
+            <div className="bg-[#B71C1C] text-white p-5 rounded-3xl border-2 border-red-500 shadow-md max-w-sm flex flex-col items-center lg:items-start gap-3 mx-auto lg:mx-0">
+              <div className="flex items-center justify-center lg:justify-start gap-2 text-xs sm:text-sm font-extrabold uppercase tracking-wider w-full">
+                <Clock className="w-4 h-4 animate-spin-slow shrink-0" />
+                <span>Promo Berakhir:</span>
+                <span className="bg-white text-[#B71C1C] px-2 py-0.5 rounded-md font-black select-none tracking-normal">
+                  {h}:{m}:{s}
+                </span>
+              </div>
+              
+              <div className="w-full">
+                <div className="flex justify-between text-[10px] sm:text-xs font-bold mb-1">
+                  <span className="flex items-center gap-1">🔥 Sisa Kuota Promo: <span className="text-yellow-300 animate-pulse font-black">7 Paket!</span></span>
+                  <span>93% Terklaim</span>
+                </div>
+                <div className="w-full bg-[#7F0000] rounded-full h-3 p-0.5 overflow-hidden shadow-inner">
+                  <div 
+                    className="bg-linear-to-r from-red-500 via-orange-400 to-yellow-300 h-full rounded-full animate-pulse transition-all duration-1000"
+                    style={{ width: '93%' }}
+                  />
+                </div>
+              </div>
+            </div>
+
             <div className="pt-2 flex justify-center lg:justify-start">
               {/* Quick CTA */}
               <button onClick={() => handleCheckout('Purchase', 5000)} className="bg-red-600 text-white px-8 py-4 rounded-full font-bold text-lg md:text-xl shadow-2xl border-2 border-red-400 hover:bg-red-700 transition animate-bounce flex items-center justify-center gap-2">
