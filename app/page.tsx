@@ -286,15 +286,15 @@ const App = () => {
             </p>
 
             {/* Pricing Highlight block */}
-            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 bg-white/80 backdrop-blur-xs p-4 rounded-3xl border border-orange-100 shadow-md max-w-md mx-auto lg:mx-0">
+            <div className="flex flex-col items-center lg:items-start gap-2 bg-white/85 backdrop-blur-xs p-5 rounded-3xl border border-orange-100 shadow-md max-w-sm mx-auto lg:mx-0">
               <div className="text-center lg:text-left">
-                <span className="text-xs text-gray-500 font-bold uppercase block tracking-wider">Nilai Total Paket:</span>
+                <span className="text-xs text-gray-500 font-bold uppercase tracking-wider block mb-0.5">Nilai Total Paket:</span>
                 <span className="text-lg font-black text-gray-400 line-through">Rp 1.999.000</span>
               </div>
-              <div className="h-px w-8 bg-gray-200 sm:h-8 sm:w-px hidden sm:block"></div>
+              <div className="w-full h-px bg-gray-150 my-1"></div>
               <div className="text-center lg:text-left">
-                <span className="text-xs text-red-600 font-extrabold uppercase block tracking-wider animate-pulse">Spesial Hari Ini:</span>
-                <span className="text-xl font-black text-red-600">Cukup Bayar Seikhlasnya! 💖</span>
+                <span className="text-xs text-red-600 font-extrabold uppercase tracking-wider animate-pulse block mb-0.5">Spesial Hari Ini:</span>
+                <span className="text-2xl font-black text-red-600">Cukup Bayar Seikhlasnya! 💖</span>
               </div>
             </div>
 
