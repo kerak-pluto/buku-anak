@@ -156,7 +156,9 @@ const App = () => {
         });
       }
     }
-    window.location.href = 'http://lynk.id/wira_arfi/4ox99vo1n8vm/checkout';
+    setTimeout(() => {
+      window.location.href = 'http://lynk.id/wira_arfi/4ox99vo1n8vm/checkout';
+    }, 300);
   };
 
   return (
