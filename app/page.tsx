@@ -35,9 +35,9 @@ const fakeOrders = [
 ];
 
 const testimonials = [
-  { name: "Bunda Sarah", text: "Alhamdulillah, anak saya jadi lebih rajin wudhu setelah baca panduan bergambarnya. Bahasanya sangat mudah dipahami anak-anak!", rating: 5 },
-  { name: "Ayah Rahman", text: "Koleksi ceritanya sangat inspiratif. Setiap malam sebelum tidur selalu baca ini. Harga seikhlasnya ini bener-bener berkah.", rating: 5 },
-  { name: "Bunda Lina", text: "Ilustrasinya sangat menarik! Anak saya yang umur 4 tahun betah banget lihat gambar-gambarnya. Terima kasih MuslimKids!", rating: 5 }
+  { name: "Bunda Sarah", image: "/testimonials/sarah.png", text: "Alhamdulillah, anak saya jadi lebih rajin wudhu setelah baca panduan bergambarnya. Bahasanya sangat mudah dipahami anak-anak!", rating: 5 },
+  { name: "Ayah Rahman", image: "/testimonials/rahman.png", text: "Koleksi ceritanya sangat inspiratif. Setiap malam sebelum tidur selalu baca ini. Harga seikhlasnya ini bener-bener berkah.", rating: 5 },
+  { name: "Bunda Lina", image: "/testimonials/lina.png", text: "Ilustrasinya sangat menarik! Anak saya yang umur 4 tahun betah banget lihat gambar-gambarnya. Terima kasih MuslimKids!", rating: 5 }
 ];
 
 const booksData = [
@@ -780,10 +780,14 @@ const BenefitIcon = ({ icon, text }: { icon: React.ReactNode; text: string }) =>
   </div>
 );
 
-const TestimonialCard = ({ name, text, rating }: { name: string; text: string; rating: number }) => (
-  <div className="bg-white p-6 rounded-3xl shadow-md border border-yellow-100 relative pt-10 mt-6 hover:scale-105 hover:shadow-lg transition-all duration-300">
-    <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-yellow-100 p-3 rounded-full border-4 border-white shadow-sm">
-      <User className="w-8 h-8 text-yellow-600" />
+const TestimonialCard = ({ name, image, text, rating }: { name: string; image: string; text: string; rating: number }) => (
+  <div className="bg-white p-6 rounded-3xl shadow-md border border-yellow-100 relative pt-12 mt-8 hover:scale-105 hover:shadow-lg transition-all duration-300">
+    <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-white rounded-full border-4 border-white shadow-lg w-16 h-16 overflow-hidden flex items-center justify-center">
+      {image ? (
+        <img src={image} alt={name} className="w-full h-full object-cover" />
+      ) : (
+        <User className="w-8 h-8 text-yellow-600" />
+      )}
     </div>
     <div className="flex justify-center mb-3">
       {[...Array(rating)].map((_, i) => (
