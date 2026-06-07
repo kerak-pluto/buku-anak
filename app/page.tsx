@@ -287,7 +287,7 @@ const App = () => {
 
             <div className="pt-2 flex justify-center lg:justify-start">
               {/* Quick CTA */}
-              <button onClick={() => handleCheckout('Purchase', 5000)} className="bg-green-600 text-white px-8 py-4 rounded-full font-bold text-lg md:text-xl shadow-lg border-2 border-green-400 hover:bg-green-700 transition animate-bounce flex items-center justify-center gap-2">
+              <button onClick={() => handleCheckout('Purchase', 5000)} className="bg-red-600 text-white px-8 py-4 rounded-full font-bold text-lg md:text-xl shadow-2xl border-2 border-red-400 hover:bg-red-700 transition animate-bounce flex items-center justify-center gap-2">
                 Ambil Promo Sekarang <MousePointerClick size={24} />
               </button>
             </div>
@@ -440,7 +440,7 @@ const App = () => {
           </div>
 
           <div className="text-center mt-12">
-            <button onClick={() => handleCheckout('Purchase', 5000)} className="bg-linear-to-r from-[#E65100] to-[#FF7043] text-white px-8 py-4 rounded-full font-bold text-lg shadow-lg border-2 border-orange-400 hover:shadow-xl transition transform hover:scale-105 hover-jiggle">
+            <button onClick={() => handleCheckout('Purchase', 5000)} className="bg-linear-to-r from-red-600 to-red-500 text-white px-8 py-4 rounded-full font-bold text-lg shadow-2xl border-2 border-red-400 hover:shadow-2xl transition transform hover:scale-105 hover-jiggle">
               Dapatkan Semua Koleksi Ini Sekarang!
             </button>
           </div>
@@ -555,12 +555,12 @@ const App = () => {
               </div>
 
               {/* FINAL CTA BUTTON */}
-              <button onClick={() => handleCheckout('Purchase', 5000)} className="group relative bg-linear-to-b from-white to-gray-100 hover:from-green-50 hover:to-white text-[#2E7D32] rounded-full px-6 md:px-16 py-4 md:py-6 shadow-2xl transform transition hover:scale-105 active:scale-95 w-full md:w-auto flex flex-col items-center justify-center gap-2 hover-jiggle">
+              <button onClick={() => handleCheckout('Purchase', 5000)} className="group relative bg-linear-to-b from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white rounded-full px-6 md:px-16 py-4 md:py-6 shadow-2xl transform transition hover:scale-105 active:scale-95 w-full md:w-auto flex flex-col items-center justify-center gap-2 hover-jiggle border-2 border-red-500">
                 <div className="flex items-center gap-3">
                   <span className="text-xl sm:text-2xl md:text-4xl font-black drop-shadow-sm">DAPATKAN SEKARANG!</span>
-                  <MousePointerClick className="w-8 h-8 hidden md:block text-[#E65100] animate-bounce" />
+                  <MousePointerClick className="w-8 h-8 hidden md:block text-white animate-bounce" />
                 </div>
-                <span className="text-xs sm:text-sm md:text-base font-bold opacity-80 uppercase tracking-widest">
+                <span className="text-xs sm:text-sm md:text-base font-bold opacity-90 uppercase tracking-widest">
                   Akses Selamanya via Google Drive
                 </span>
               </button>
