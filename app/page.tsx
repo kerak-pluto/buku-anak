@@ -155,10 +155,8 @@ const App = () => {
           currency: 'IDR',
         });
       }
+      window.open('http://lynk.id/wira_arfi/4ox99vo1n8vm/checkout', '_blank');
     }
-    setTimeout(() => {
-      window.location.href = 'http://lynk.id/wira_arfi/4ox99vo1n8vm/checkout';
-    }, 300);
   };
 
   return (
