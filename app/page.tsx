@@ -285,39 +285,42 @@ const App = () => {
               Bantu Ayah & Bunda menanamkan rasa cinta kepada Allah, Rasul-Nya, dan adab mulia melalui ratusan ebook interaktif, cerita bergambar, serta worksheet aktivitas seru.
             </p>
 
-            {/* Pricing Highlight block */}
-            <div className="flex flex-col items-center lg:items-start gap-2 bg-white/85 backdrop-blur-xs p-5 rounded-3xl border border-orange-100 shadow-md max-w-sm mx-auto lg:mx-0">
-              <div className="text-center lg:text-left">
-                <span className="text-xs text-gray-500 font-bold uppercase tracking-wider block mb-0.5">Nilai Total Paket:</span>
-                <span className="text-lg font-black text-gray-400 line-through">Rp 1.999.000</span>
-              </div>
-              <div className="w-full h-px bg-gray-150 my-1"></div>
-              <div className="text-center lg:text-left">
-                <span className="text-xs text-red-600 font-extrabold uppercase tracking-wider animate-pulse block mb-0.5">Spesial Hari Ini:</span>
-                <span className="text-2xl font-black text-red-600">Cukup Bayar Seikhlasnya! 💖</span>
-              </div>
-            </div>
-
-            {/* Countdown & Quota on Top (Hero Section) */}
-            <div className="bg-[#B71C1C] text-white p-5 rounded-3xl border-2 border-red-500 shadow-md max-w-sm flex flex-col items-center lg:items-start gap-3 mx-auto lg:mx-0">
-              <div className="flex items-center justify-center lg:justify-start gap-2 text-xs sm:text-sm font-extrabold uppercase tracking-wider w-full">
-                <Clock className="w-4 h-4 animate-spin-slow shrink-0" />
-                <span>Promo Berakhir:</span>
-                <span className="bg-white text-[#B71C1C] px-2 py-0.5 rounded-md font-black select-none tracking-normal">
-                  {h}:{m}:{s}
-                </span>
-              </div>
-              
-              <div className="w-full">
-                <div className="flex justify-between text-[10px] sm:text-xs font-bold mb-1">
-                  <span className="flex items-center gap-1">🔥 Sisa Kuota Promo: <span className="text-yellow-300 animate-pulse font-black">7 Paket!</span></span>
-                  <span>93% Terklaim</span>
+            {/* Promo Pricing & Countdown Row (2-column layout) */}
+            <div className="flex flex-col sm:flex-row gap-4 max-w-2xl mx-auto lg:mx-0 w-full items-stretch">
+              {/* Column 1: Pricing Highlight Block */}
+              <div className="flex-1 flex flex-col justify-between items-center lg:items-start gap-2 bg-white/85 backdrop-blur-xs p-5 rounded-3xl border border-orange-100 shadow-md">
+                <div className="text-center lg:text-left">
+                  <span className="text-xs text-gray-500 font-bold uppercase tracking-wider block mb-0.5">Nilai Total Paket:</span>
+                  <span className="text-lg font-black text-gray-400 line-through">Rp 1.999.000</span>
                 </div>
-                <div className="w-full bg-[#7F0000] rounded-full h-3 p-0.5 overflow-hidden shadow-inner">
-                  <div 
-                    className="bg-linear-to-r from-red-500 via-orange-400 to-yellow-300 h-full rounded-full animate-pulse transition-all duration-1000"
-                    style={{ width: '93%' }}
-                  />
+                <div className="w-full h-px bg-gray-150 my-1"></div>
+                <div className="text-center lg:text-left">
+                  <span className="text-xs text-red-600 font-extrabold uppercase tracking-wider animate-pulse block mb-0.5">Spesial Hari Ini:</span>
+                  <span className="text-2xl font-black text-red-600">Cukup Bayar Seikhlasnya! 💖</span>
+                </div>
+              </div>
+
+              {/* Column 2: Countdown & Quota Block */}
+              <div className="flex-1 bg-[#B71C1C] text-white p-5 rounded-3xl border-2 border-red-500 shadow-md flex flex-col justify-between items-center lg:items-start gap-3">
+                <div className="flex items-center justify-center lg:justify-start gap-2 text-xs sm:text-sm font-extrabold uppercase tracking-wider w-full">
+                  <Clock className="w-4 h-4 animate-spin-slow shrink-0" />
+                  <span>Promo Berakhir:</span>
+                  <span className="bg-white text-[#B71C1C] px-2 py-0.5 rounded-md font-black select-none tracking-normal">
+                    {h}:{m}:{s}
+                  </span>
+                </div>
+                
+                <div className="w-full">
+                  <div className="flex justify-between text-[10px] sm:text-xs font-bold mb-1">
+                    <span className="flex items-center gap-1">🔥 Sisa Kuota Promo: <span className="text-yellow-300 animate-pulse font-black">7 Paket!</span></span>
+                    <span>93% Terklaim</span>
+                  </div>
+                  <div className="w-full bg-[#7F0000] rounded-full h-3 p-0.5 overflow-hidden shadow-inner">
+                    <div 
+                      className="bg-linear-to-r from-red-500 via-orange-400 to-yellow-300 h-full rounded-full animate-pulse transition-all duration-1000"
+                      style={{ width: '93%' }}
+                    />
+                  </div>
                 </div>
               </div>
             </div>
