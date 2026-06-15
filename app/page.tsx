@@ -36,8 +36,8 @@ const fakeOrders = [
 
 const testimonials = [
   { name: "Bunda Sarah", image: "/testimonials/sarah.png", text: "Alhamdulillah, anak saya jadi lebih rajin wudhu setelah baca panduan bergambarnya. Bahasanya sangat mudah dipahami anak-anak!", rating: 5 },
-  { name: "Ayah Rahman", image: "/testimonials/rahman.png", text: "Koleksi ceritanya sangat inspiratif. Setiap malam sebelum tidur selalu baca ini. Harga Rp 20.000 ini bener-bener berkah.", rating: 5 },
-  { name: "Bunda Lina", image: "/testimonials/lina.png", text: "Ilustrasinya sangat menarik! Anak saya yang umur 4 tahun betah banget lihat gambar-gambarnya. Terima kasih MuslimKids!", rating: 5 }
+  { name: "Ayah Rahman", image: "/testimonials/rahman.png", text: "Koleksi ceritanya sangat inspiratif. Setiap malam sebelum tidur selalu baca ini. Harga Rp 20.000 ini benar-benar berkah.", rating: 5 },
+  { name: "Bunda Lina", image: "/testimonials/lina.png", text: "Ilustrasinya sangat menarik! Anak saya yang berusia 4 tahun betah banget lihat gambar-gambarnya. Terima kasih MuslimKids!", rating: 5 }
 ];
 
 const booksData = [
@@ -373,7 +373,7 @@ const App = () => {
             <FeatureItem
               icon={<BookOpen className="text-[#E65100] w-12 h-12" />}
               title="Konten Berkualitas & Terpercaya"
-              desc="Disusun oleh tim berpengalaman dibidangnya, memastikan cerita sesuai dengan nilai-nilai Islam."
+              desc="Disusun oleh tim berpengalaman di bidangnya, memastikan cerita sesuai dengan nilai-nilai Islam."
             />
             <FeatureItem
               icon={<Smile className="text-[#E65100] w-12 h-12" />}
@@ -429,10 +429,10 @@ const App = () => {
           {/* --- WHATSAPP CHAT TESTIMONIALS --- */}
           <div className="mt-16 text-center">
             <h3 className="text-xl md:text-2xl font-extrabold text-[#E65100] uppercase tracking-wide">
-              💬 Bukti Chat WhatsApp Asli dari Para Bunda
+              💬 Bukti Kepuasan Bunda: Real Chat WhatsApp & Ulasan Jujur
             </h3>
             <p className="text-sm md:text-base text-gray-700 font-medium mt-1 max-w-xl mx-auto">
-              Bukan rekayasa, ini tanggapan langsung dan tulus dari orang tua yang merasakan manfaatnya.
+              Alhamdulillah, ribuan orang tua telah merasakan manfaat dari koleksi ebook & worksheet MuslimKids. Berikut tangkapan layar chat asli tanpa rekayasa!
             </p>
           </div>
 
