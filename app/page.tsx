@@ -425,33 +425,6 @@ const App = () => {
               <TestimonialCard key={idx} {...testi} />
             ))}
           </div>
-
-          {/* --- WHATSAPP CHAT TESTIMONIALS --- */}
-          <div className="mt-16 text-center">
-            <h3 className="text-xl md:text-2xl font-extrabold text-[#E65100] uppercase tracking-wide">
-              💬 Bukti Kepuasan Bunda: Real Chat WhatsApp & Ulasan Jujur
-            </h3>
-            <p className="text-sm md:text-base text-gray-700 font-medium mt-1 max-w-xl mx-auto">
-              Alhamdulillah, ribuan orang tua telah merasakan manfaat dari koleksi ebook & worksheet MuslimKids. Berikut tangkapan layar chat asli tanpa rekayasa!
-            </p>
-          </div>
-
-          <div className="mt-8 flex flex-col md:flex-row gap-8 justify-center items-stretch max-w-4xl mx-auto px-4">
-            <div className="w-full md:w-1/2 max-w-sm bg-white p-3 rounded-[2rem] shadow-lg border border-yellow-100 hover:scale-102 transition duration-300 flex flex-col">
-              <img 
-                src="/testimonials/wa-testimonial-1.png" 
-                alt="Testimoni WhatsApp Bunda Dinda" 
-                className="rounded-[1.5rem] w-full h-auto shadow-inner object-cover"
-              />
-            </div>
-            <div className="w-full md:w-1/2 max-w-sm bg-white p-3 rounded-[2rem] shadow-lg border border-yellow-100 hover:scale-102 transition duration-300 flex flex-col">
-              <img 
-                src="/testimonials/wa-testimonial-2.png" 
-                alt="Testimoni WhatsApp Bunda Tari" 
-                className="rounded-[1.5rem] w-full h-auto shadow-inner object-cover"
-              />
-            </div>
-          </div>
         </section>
 
         {/* --- BOOK GALLERY SECTION --- */}
