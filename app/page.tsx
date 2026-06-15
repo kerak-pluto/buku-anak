@@ -36,7 +36,7 @@ const fakeOrders = [
 
 const testimonials = [
   { name: "Bunda Sarah", image: "/testimonials/sarah.png", text: "Alhamdulillah, anak saya jadi lebih rajin wudhu setelah baca panduan bergambarnya. Bahasanya sangat mudah dipahami anak-anak!", rating: 5 },
-  { name: "Ayah Rahman", image: "/testimonials/rahman.png", text: "Koleksi ceritanya sangat inspiratif. Setiap malam sebelum tidur selalu baca ini. Harga seikhlasnya ini bener-bener berkah.", rating: 5 },
+  { name: "Ayah Rahman", image: "/testimonials/rahman.png", text: "Koleksi ceritanya sangat inspiratif. Setiap malam sebelum tidur selalu baca ini. Harga Rp 20.000 ini bener-bener berkah.", rating: 5 },
   { name: "Bunda Lina", image: "/testimonials/lina.png", text: "Ilustrasinya sangat menarik! Anak saya yang umur 4 tahun betah banget lihat gambar-gambarnya. Terima kasih MuslimKids!", rating: 5 }
 ];
 
@@ -146,7 +146,7 @@ const App = () => {
 
   const { h, m, s } = formatTime(timeLeft);
 
-  const handleCheckout = (eventName: 'Purchase' | 'InitiateCheckout' = 'Purchase', value = 5000) => {
+  const handleCheckout = (eventName: 'Purchase' | 'InitiateCheckout' = 'Purchase', value = 20000) => {
     if (typeof window !== 'undefined') {
       const fbq = (window as any).fbq;
       if (fbq) {
@@ -227,7 +227,7 @@ const App = () => {
       {/* --- 7. ORDER RUNNING TEXT (TOP BAR) --- */}
       <div className="bg-[#E65100] text-white py-2 overflow-hidden whitespace-nowrap relative z-50 shadow-md border-b-2 border-orange-400">
         <div className="inline-block animate-scroll text-sm md:text-base font-semibold tracking-wide">
-          🔥 PROMO SPESIAL: BAYAR SEIKHLASNYA! | 🎉 Bunda Aisyah (Jakarta) baru saja mengamankan paketnya! | 🎉 Ayah Budi (Surabaya) baru saja membeli paket! | ⏰ WAKTU TERBATAS, AMANKAN SEKARANG! | 🎉 Kak Nisa (Bandung) baru saja membeli paket!
+          🔥 PROMO SPESIAL: HANYA RP 20.000! | 🎉 Bunda Aisyah (Jakarta) baru saja mengamankan paketnya! | 🎉 Ayah Budi (Surabaya) baru saja membeli paket! | ⏰ WAKTU TERBATAS, AMANKAN SEKARANG! | 🎉 Kak Nisa (Bandung) baru saja membeli paket!
         </div>
       </div>
 
@@ -296,7 +296,7 @@ const App = () => {
                 <div className="w-full h-px bg-gray-150 my-1"></div>
                 <div className="text-center lg:text-left">
                   <span className="text-xs text-red-600 font-extrabold uppercase tracking-wider animate-pulse block mb-0.5">Spesial Hari Ini:</span>
-                  <span className="text-2xl font-black text-red-600">Cukup Bayar Seikhlasnya! 💖</span>
+                  <span className="text-2xl font-black text-red-600">Hanya Rp 20.000! 💖</span>
                 </div>
               </div>
 
@@ -327,7 +327,7 @@ const App = () => {
 
             <div className="pt-2 flex justify-center lg:justify-start">
               {/* Quick CTA */}
-              <button onClick={() => handleCheckout('Purchase', 5000)} className="bg-red-600 text-white px-8 py-4 rounded-full font-bold text-lg md:text-xl shadow-2xl border-2 border-red-400 hover:bg-red-700 transition animate-bounce flex items-center justify-center gap-2">
+              <button onClick={() => handleCheckout('Purchase', 20000)} className="bg-red-600 text-white px-8 py-4 rounded-full font-bold text-lg md:text-xl shadow-2xl border-2 border-red-400 hover:bg-red-700 transition animate-bounce flex items-center justify-center gap-2">
                 Ambil Promo Sekarang <MousePointerClick size={24} />
               </button>
             </div>
@@ -480,7 +480,7 @@ const App = () => {
           </div>
 
           <div className="text-center mt-12">
-            <button onClick={() => handleCheckout('Purchase', 5000)} className="bg-linear-to-r from-red-600 to-red-500 text-white px-8 py-4 rounded-full font-bold text-lg shadow-2xl border-2 border-red-400 hover:shadow-2xl transition transform hover:scale-105 hover-jiggle">
+            <button onClick={() => handleCheckout('Purchase', 20000)} className="bg-linear-to-r from-red-600 to-red-500 text-white px-8 py-4 rounded-full font-bold text-lg shadow-2xl border-2 border-red-400 hover:shadow-2xl transition transform hover:scale-105 hover-jiggle">
               Dapatkan Semua Koleksi Ini Sekarang!
             </button>
           </div>
@@ -535,12 +535,12 @@ const App = () => {
               <div className="text-3xl font-black text-[#E65100]">Rp 2.500.000+</div>
             </div>
             <div className="bg-[#2E7D32] text-white px-6 py-3 rounded-2xl font-black text-sm uppercase tracking-wide border-2 border-green-400 shadow-md hover-jiggle cursor-default transition">
-              Cukup Bayar Seikhlasnya! 💖
+              Hanya Rp 20.000! 💖
             </div>
           </div>
         </section>
 
-        {/* --- 5. COUNTDOWN PROMO SEIKHLASNYA --- */}
+        {/* --- 5. COUNTDOWN PROMO RP 20.000 --- */}
         <section className="max-w-4xl mx-auto relative mt-8">
 
           {/* Countdown Header */}
@@ -590,7 +590,7 @@ const App = () => {
                 </div>
 
                 <div className="bg-[#FF9800] text-white px-6 md:px-12 py-4 md:py-6 rounded-3xl md:rounded-4xl font-black text-center shadow-[0_8px_0_#E65100] md:shadow-[0_10px_0_#E65100] border-4 border-white transform transition hover:-translate-y-1 hover:shadow-[0_12px_0_#E65100] md:hover:shadow-[0_15px_0_#E65100] cursor-default mt-4 md:mt-0 hover-jiggle animate-pulse-slow">
-                  <span className="text-2xl sm:text-3xl md:text-5xl drop-shadow-md leading-tight text-white">CUKUP BAYAR<br /><span className="text-[#FFFDE7]">SEIKHLASNYA!</span></span>
+                  <span className="text-2xl sm:text-3xl md:text-5xl drop-shadow-md leading-tight text-white">HANYA<br /><span className="text-[#FFFDE7]">RP 20.000!</span></span>
                 </div>
               </div>
 
@@ -609,7 +609,7 @@ const App = () => {
               </div>
 
               {/* FINAL CTA BUTTON */}
-              <button onClick={() => handleCheckout('Purchase', 5000)} className="group relative bg-linear-to-b from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white rounded-full px-6 md:px-16 py-4 md:py-6 shadow-2xl transform transition hover:scale-105 active:scale-95 w-full md:w-auto flex flex-col items-center justify-center gap-2 hover-jiggle border-2 border-red-500">
+              <button onClick={() => handleCheckout('Purchase', 20000)} className="group relative bg-linear-to-b from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white rounded-full px-6 md:px-16 py-4 md:py-6 shadow-2xl transform transition hover:scale-105 active:scale-95 w-full md:w-auto flex flex-col items-center justify-center gap-2 hover-jiggle border-2 border-red-500">
                 <div className="flex items-center gap-3">
                   <span className="text-xl sm:text-2xl md:text-4xl font-black drop-shadow-sm">DAPATKAN SEKARANG!</span>
                   <MousePointerClick className="w-8 h-8 hidden md:block text-white animate-bounce" />
@@ -635,33 +635,33 @@ const App = () => {
 
             <InfographicStep
               num="1"
-              icon={<Heart className="w-8 h-8" />}
-              title="Isi Nominal"
-              desc="Ketik harga seikhlasnya di kolom yang tersedia."
-            />
-            <InfographicStep
-              num="2"
               icon={<FileText className="w-8 h-8" />}
               title="Isi Data Diri"
               desc="Lengkapi Email, Nama & Nomor WhatsApp."
             />
             <InfographicStep
-              num="3"
+              num="2"
               icon={<CreditCard className="w-8 h-8" />}
-              title="Pilih Metode & Bayar"
-              desc="Pilih QRIS/E-Wallet/Transfer, dan Konfirmasi!"
+              title="Pilih Pembayaran"
+              desc="Pilih QRIS, E-Wallet, atau Transfer Bank."
             />
             <InfographicStep
-              num="4"
+              num="3"
               icon={<CheckSquare className="w-8 h-8" />}
               title="Centang S&K"
               desc="Centang kotak persetujuan 'Terms of Use'."
             />
             <InfographicStep
-              num="5"
+              num="4"
               icon={<MousePointerClick className="w-8 h-8" />}
               title="Klik Buy Now"
               desc="Tekan tombol 'Buy Now' berwarna hijau."
+            />
+            <InfographicStep
+              num="5"
+              icon={<DownloadCloud className="w-8 h-8" />}
+              title="Akses Ebook"
+              desc="Link Google Drive dikirim via WA/Email."
             />
           </div>
         </section>

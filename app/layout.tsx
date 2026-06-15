@@ -14,12 +14,12 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "MuslimKids - Perpustakaan Digital Anak Islam Terlengkap",
-  description: "Dapatkan akses ke 100+ koleksi buku & worksheet anak Islam dengan ilustrasi full-color untuk belajar seru setiap hari. Promo bayar seikhlasnya!",
+  description: "Dapatkan akses ke 100+ koleksi buku & worksheet anak Islam dengan ilustrasi full-color untuk belajar seru setiap hari. Hanya Rp 20.000!",
   keywords: "buku anak islam, worksheet ramadhan, belajar islam anak, ebook anak muslim, muslimkids",
   authors: [{ name: "MuslimKids" }],
   openGraph: {
     title: "MuslimKids - Perpustakaan Digital Anak Islam Terlengkap",
-    description: "Dapatkan akses ke 100+ koleksi buku & worksheet anak Islam dengan ilustrasi full-color untuk belajar seru setiap hari. Promo bayar seikhlasnya!",
+    description: "Dapatkan akses ke 100+ koleksi buku & worksheet anak Islam dengan ilustrasi full-color untuk belajar seru setiap hari. Hanya Rp 20.000!",
     locale: "id_ID",
     type: "website",
   },
